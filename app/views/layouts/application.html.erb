@@ -1,0 +1,33 @@
+<html>
+<head>
+  <title>HISText</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div class="container">
+  <ul class="nav nav-tabs">
+    <li><%= link_to "Home", root_path %></li>
+    <li><%= link_to "About Us", welcome_about_path %></li>
+    <li><%= link_to "Contact", welcome_contact_path %></li>
+    <li><%= link_to "Features", welcome_features_path %></li>
+    <li><%= link_to "FAQs", welcome_faq_path %></li>
+    <li><%= link_to "Pricing", welcome_pricing_path %></li>
+    <li><%= link_to "Login", users_sign_in_path %></li>
+  </ul>
+  
+<% if notice %>
+  <p class="alert alert-success"><%= notice %></p>
+<% end %>
+<% if alert %>
+  <p class="alert alert-danger"><%= alert %></p>
+<% end %>
+
+  <%= yield %>
+  
+</div>
+
+</body>
+</html
