@@ -1,5 +1,8 @@
 class ApplicationController < ActionController::Base
+  # To force user to sign in before continueing
+  #before_action :authenticate_user!
   def index
+
   end
 
   def about
